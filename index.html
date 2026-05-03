@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>在人旅館 _ 台灣意象書法館｜行銷優化策略提案</title>
+<meta name="description" content="陳世憲老師的台灣意象書法館行銷優化全方位提案，從品牌定位、產品設計到 AI 內容生產，協助文化型住宿提升訂價優勢與品牌價值。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --ink-soft:#3a3a3a;
+    --paper:#f5f1e8;
+    --paper-deep:#ebe4d3;
+    --vermilion:#c0392b;
+    --vermilion-deep:#8e2820;
+    --gold:#b8860b;
+    --gray:#8a8580;
+    --line:#d8d2c4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Noto Sans TC',-apple-system,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.7;
+    font-weight:300;
+  }
+  .serif{font-family:'Noto Serif TC',serif}
+  .brush{font-family:'Ma Shan Zheng',serif}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+  /* ===== Hero ===== */
+  .hero{
+    min-height:100vh;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(192,57,43,0.06) 0%, transparent 60%),
+      linear-gradient(180deg, var(--paper) 0%, var(--paper-deep) 100%);
+    display:flex;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:'墨';
+    position:absolute;
+    font-family:'Ma Shan Zheng',serif;
+    font-size:60vmin;
+    color:var(--ink);
+    opacity:0.025;
+    right:-5vmin;
+    top:-10vmin;
+    line-height:1;
+    pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2}
+  .stamp{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:64px;height:64px;
+    background:var(--vermilion);
+    color:#f5f1e8;
+    font-family:'Ma Shan Zheng',serif;
+    font-size:32px;
+    border-radius:6px;
+    transform:rotate(-3deg);
+    box-shadow:0 4px 12px rgba(192,57,43,0.3);
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-family:'Noto Serif TC',serif;
+    font-size:clamp(36px,6.5vw,84px);
+    font-weight:900;
+    letter-spacing:-0.02em;
+    line-height:1.1;
+    color:var(--ink);
+    margin-bottom:20px;
+  }
+  .hero h1 .accent{
+    color:var(--vermilion);
+    position:relative;
+  }
+  .hero .subtitle{
+    font-size:clamp(16px,1.6vw,22px);
+    color:var(--ink-soft);
+    max-width:680px;
+    margin-bottom:48px;
+    font-weight:300;
+  }
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:32px;
+    padding-top:32px;
+    border-top:1px solid var(--line);
+  }
+  .hero-meta div small{
+    display:block;font-size:11px;letter-spacing:0.2em;
+    color:var(--gray);text-transform:uppercase;margin-bottom:4px;
+  }
+  .hero-meta div b{
+    font-family:'Noto Serif TC',serif;
+    font-size:18px;font-weight:500;
+  }
+  .scroll-hint{
+    position:absolute;bottom:32px;left:50%;
+    transform:translateX(-50%);
+    font-size:12px;letter-spacing:0.3em;color:var(--gray);
+    animation:bounce 2s ease-in-out infinite;
+  }
+  @keyframes bounce{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+  /* ===== Section common ===== */
+  section{padding:120px 0;position:relative}
+  .section-tag{
+    display:inline-block;
+    font-size:11px;letter-spacing:0.4em;color:var(--vermilion);
+    margin-bottom:16px;text-transform:uppercase;font-weight:500;
+  }
+  .section-title{
+    font-family:'Noto Serif TC',serif;
+    font-size:clamp(32px,4.5vw,56px);
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:24px;
+    color:var(--ink);
+  }
+  .section-subtitle{
+    font-size:18px;color:var(--ink-soft);
+    max-width:720px;margin-bottom:64px;
+  }
+  .section-divider{
+    width:60px;height:2px;background:var(--vermilion);
+    margin:24px 0 40px;
+  }
+
+  /* ===== KPI Snapshot ===== */
+  .snapshot{background:#fff}
+  .kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:1px;background:var(--line);
+    border:1px solid var(--line);
+    margin-top:40px;
+  }
+  .kpi{
+    background:#fff;padding:36px 28px;
+    transition:background .3s;
+  }
+  .kpi:hover{background:var(--paper)}
+  .kpi .num{
+    font-family:'Noto Serif TC',serif;
+    font-size:48px;font-weight:700;
+    color:var(--ink);line-height:1;
+    margin-bottom:8px;
+  }
+  .kpi .num small{font-size:18px;font-weight:400;color:var(--ink-soft)}
+  .kpi .label{
+    font-size:13px;color:var(--gray);
+    letter-spacing:0.05em;
+  }
+
+  /* ===== Positioning shift ===== */
+  .shift{
+    background:linear-gradient(135deg,var(--ink) 0%,#0d0d0d 100%);
+    color:var(--paper);
+  }
+  .shift .section-title{color:#fff}
+  .shift .section-subtitle{color:#bbb}
+  .shift-grid{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    gap:48px;align-items:center;
+    margin-top:56px;
+  }
+  .shift-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.1);
+    padding:40px 32px;border-radius:4px;
+    backdrop-filter:blur(10px);
+  }
+  .shift-card.bad{opacity:0.5}
+  .shift-card h3{
+    font-family:'Noto Serif TC',serif;
+    font-size:24px;margin-bottom:20px;
+  }
+  .shift-card.good h3{color:var(--vermilion)}
+  .shift-card ul{list-style:none}
+  .shift-card li{
+    padding:10px 0;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    font-size:15px;
+  }
+  .shift-card li:last-child{border:0}
+  .shift-arrow{
+    font-family:'Ma Shan Zheng',serif;
+    font-size:64px;color:var(--vermilion);
+    text-align:center;
+  }
+  @media(max-width:768px){
+    .shift-grid{grid-template-columns:1fr;gap:24px}
+    .shift-arrow{transform:rotate(90deg);font-size:40px}
+  }
+
+  /* ===== Optimization 8 quadrants ===== */
+  .quadrants{background:var(--paper)}
+  .q-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:24px;margin-top:48px;
+  }
+  .q-card{
+    background:#fff;
+    padding:32px 28px;
+    border-top:3px solid var(--vermilion);
+    box-shadow:0 1px 3px rgba(0,0,0,0.04);
+    transition:transform .3s,box-shadow .3s;
+    position:relative;
+  }
+  .q-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 24px rgba(0,0,0,0.08);
+  }
+  .q-card .q-num{
+    position:absolute;top:24px;right:28px;
+    font-family:'Noto Serif TC',serif;
+    font-size:36px;color:var(--paper-deep);
+    font-weight:900;line-height:1;
+  }
+  .q-card h3{
+    font-family:'Noto Serif TC',serif;
+    font-size:22px;font-weight:700;margin-bottom:6px;
+    color:var(--ink);
+  }
+  .q-card .q-en{
+    font-size:11px;letter-spacing:0.2em;
+    color:var(--gray);text-transform:uppercase;
+    margin-bottom:20px;
+  }
+  .q-card ul{list-style:none}
+  .q-card li{
+    padding:8px 0 8px 18px;
+    font-size:14.5px;color:var(--ink-soft);
+    position:relative;
+    border-bottom:1px dashed var(--line);
+  }
+  .q-card li:last-child{border:0}
+  .q-card li::before{
+    content:'';position:absolute;left:0;top:14px;
+    width:6px;height:6px;background:var(--vermilion);
+    border-radius:50%;
+  }
+  .q-card .priority{
+    display:inline-block;
+    font-size:11px;padding:3px 10px;
+    background:var(--paper);color:var(--ink-soft);
+    margin-left:6px;border-radius:3px;
+  }
+  .priority.high{background:var(--vermilion);color:#fff}
+  .priority.mid{background:var(--gold);color:#fff}
+
+  /* ===== Roadmap ===== */
+  .roadmap{background:#fff}
+  .timeline{
+    position:relative;
+    margin-top:64px;padding-left:32px;
+  }
+  .timeline::before{
+    content:'';position:absolute;left:8px;top:8px;bottom:8px;
+    width:2px;background:var(--vermilion);
+  }
+  .phase{
+    position:relative;padding-bottom:48px;
+  }
+  .phase::before{
+    content:'';position:absolute;left:-32px;top:6px;
+    width:18px;height:18px;
+    background:var(--vermilion);border:3px solid #fff;
+    border-radius:50%;box-shadow:0 0 0 2px var(--vermilion);
+  }
+  .phase-time{
+    font-size:12px;letter-spacing:0.2em;color:var(--vermilion);
+    text-transform:uppercase;font-weight:500;margin-bottom:6px;
+  }
+  .phase h3{
+    font-family:'Noto Serif TC',serif;
+    font-size:26px;font-weight:700;
+    margin-bottom:12px;
+  }
+  .phase p{color:var(--ink-soft);margin-bottom:16px}
+  .phase-tags{display:flex;flex-wrap:wrap;gap:8px}
+  .phase-tags span{
+    font-size:13px;padding:6px 14px;
+    background:var(--paper);color:var(--ink);
+    border:1px solid var(--line);border-radius:20px;
+  }
+
+  /* ===== Services ===== */
+  .services{
+    background:linear-gradient(135deg,var(--paper) 0%,#fff 100%);
+  }
+  .svc-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;margin-top:48px;
+  }
+  .svc{
+    background:#fff;padding:32px 28px;
+    border:1px solid var(--line);border-radius:4px;
+    transition:all .3s;
+    position:relative;overflow:hidden;
+  }
+  .svc::before{
+    content:'';position:absolute;left:0;top:0;
+    width:4px;height:0;background:var(--vermilion);
+    transition:height .3s;
+  }
+  .svc:hover{border-color:var(--vermilion)}
+  .svc:hover::before{height:100%}
+  .svc-icon{
+    width:48px;height:48px;
+    background:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Ma Shan Zheng',serif;
+    font-size:28px;color:var(--vermilion);
+    margin-bottom:20px;border-radius:4px;
+  }
+  .svc h3{
+    font-family:'Noto Serif TC',serif;
+    font-size:19px;font-weight:700;margin-bottom:8px;
+  }
+  .svc p{font-size:14.5px;color:var(--ink-soft);margin-bottom:12px}
+  .svc .deliv{
+    font-size:12px;color:var(--gray);
+    padding-top:12px;border-top:1px dashed var(--line);
+  }
+  .svc .deliv b{color:var(--vermilion)}
+
+  /* ===== Expected Impact ===== */
+  .impact{
+    background:linear-gradient(180deg,var(--ink) 0%,#0a0a0a 100%);
+    color:var(--paper);
+  }
+  .impact .section-title{color:#fff}
+  .impact .section-subtitle{color:#aaa}
+  .impact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:24px;margin-top:56px;
+  }
+  .impact-card{
+    background:rgba(192,57,43,0.08);
+    border:1px solid rgba(192,57,43,0.3);
+    padding:32px 24px;text-align:center;
+    border-radius:4px;
+  }
+  .impact-card .from-to{
+    font-family:'Noto Serif TC',serif;
+    font-size:20px;color:#fff;margin-bottom:8px;
+  }
+  .impact-card .from{color:#888;text-decoration:line-through;font-size:16px}
+  .impact-card .to{color:var(--vermilion);font-weight:700;font-size:28px;display:block;margin-top:6px}
+  .impact-card .label{
+    font-size:13px;color:#bbb;
+    margin-top:12px;letter-spacing:0.05em;
+  }
+
+  /* ===== CTA ===== */
+  .cta{
+    background:#fff;text-align:center;
+    padding:140px 0;
+  }
+  .cta h2{
+    font-family:'Noto Serif TC',serif;
+    font-size:clamp(36px,5vw,64px);
+    font-weight:900;line-height:1.2;
+    margin-bottom:24px;
+  }
+  .cta h2 .brush-stroke{
+    background:linear-gradient(180deg,transparent 60%,rgba(192,57,43,0.15) 60%);
+    padding:0 8px;
+  }
+  .cta p{
+    font-size:18px;color:var(--ink-soft);
+    max-width:600px;margin:0 auto 40px;
+  }
+  .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:18px 36px;font-size:15px;
+    font-family:'Noto Serif TC',serif;font-weight:500;
+    text-decoration:none;border-radius:2px;
+    transition:all .3s;
+  }
+  .btn-primary{background:var(--vermilion);color:#fff}
+  .btn-primary:hover{background:var(--vermilion-deep);transform:translateY(-2px);box-shadow:0 8px 16px rgba(192,57,43,0.3)}
+  .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+  .btn-secondary:hover{background:var(--ink);color:#fff}
+
+  /* ===== Footer ===== */
+  footer{
+    background:var(--ink);color:#888;
+    padding:48px 0;text-align:center;
+    font-size:13px;
+  }
+  footer .vermilion{color:var(--vermilion)}
+
+  /* ===== Reveal animation ===== */
+  .reveal{
+    opacity:0;transform:translateY(30px);
+    transition:opacity .8s,transform .8s;
+  }
+  .reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="stamp">陳</div>
+    <h1>為書法家寫下<br><span class="accent">下一章</span>商業敘事</h1>
+    <p class="subtitle">
+      在人旅館 _ 台灣意象書法館，從廢校到藝術園區的轉身已經完成。<br>
+      接下來，我們協助這座館從「住宿地點」蛻變為<b>文化目的地</b>。
+    </p>
+    <div class="hero-meta">
+      <div><small>對象</small><b>陳世憲｜館長</b></div>
+      <div><small>場域</small><b>台南白河 5,000 坪藝術園區</b></div>
+      <div><small>提案</small><b>八大優化方向 ＋ 三階段路線圖</b></div>
+      <div><small>日期</small><b>2026.05</b></div>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL ↓</div>
+</section>
+
+<!-- ===== SNAPSHOT ===== -->
+<section class="snapshot">
+  <div class="container">
+    <span class="section-tag">CURRENT SNAPSHOT</span>
+    <h2 class="section-title">館舍現況一覽</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      下面的數字告訴我們：產品力已經到位，Booking 8.7 高分代表住客喜歡這裡。
+      問題不在「住起來怎麼樣」，而在「外面的人怎麼認識這裡、為什麼要來」。
+    </p>
+    <div class="kpi-grid">
+      <div class="kpi"><div class="num">13<small> 間</small></div><div class="label">主題客房（雙人 8 + 四人 2 + 通鋪 3）</div></div>
+      <div class="kpi"><div class="num">5,000<small> 坪</small></div><div class="label">廢校改建的書法藝術園區</div></div>
+      <div class="kpi"><div class="num">3,000<small>–6,400</small></div><div class="label">目前房價區間（NTD）</div></div>
+      <div class="kpi"><div class="num">8.7<small> / 10</small></div><div class="label">Booking.com 客戶評分</div></div>
+      <div class="kpi"><div class="num">3<small> 國</small></div><div class="label">館長國際展出（法 / 日 / 美）</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== POSITIONING SHIFT ===== -->
+<section class="shift">
+  <div class="container">
+    <span class="section-tag" style="color:var(--vermilion)">POSITIONING SHIFT</span>
+    <h2 class="section-title">最關鍵的轉換：定價錨點</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      決定能否賣高價的不是設施，是<b>客人腦中的比較對象</b>。
+      只要還跟「白河民宿」比，再美也只能 1,500–2,500。
+      換成跟「文化體驗」比，6,000–15,000 就能成立。
+    </p>
+    <div class="shift-grid">
+      <div class="shift-card bad">
+        <h3>從這裡：賣床位</h3>
+        <ul>
+          <li>比的是 CP 值</li>
+          <li>跟周邊民宿同台</li>
+          <li>客人預期：1,500–2,500</li>
+          <li>差異化靠裝潢、早餐</li>
+          <li>淡旺季波動大</li>
+        </ul>
+      </div>
+      <div class="shift-arrow">→</div>
+      <div class="shift-card good">
+        <h3>到這裡：賣作品</h3>
+        <ul>
+          <li>比的是稀缺性</li>
+          <li>跟藝廊、文化體驗同台</li>
+          <li>客人預期：6,000–15,000</li>
+          <li>差異化靠館長 IP、敘事</li>
+          <li>非旺季靠工作坊與企業客</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8 QUADRANTS ===== -->
+<section class="quadrants">
+  <div class="container">
+    <span class="section-tag">OPTIMIZATION FRAMEWORK</span>
+    <h2 class="section-title">八大優化方向</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      把所有可以做的事情拆成八個面向。<span style="color:var(--vermilion);font-weight:500">紅色標籤</span>是優先做的，<span style="color:var(--gold);font-weight:500">黃色</span>是中期，其他可彈性安排。
+    </p>
+    <div class="q-grid">
+      <div class="q-card">
+        <div class="q-num">01</div>
+        <h3>品牌與定位</h3>
+        <div class="q-en">BRAND IDENTITY</div>
+        <ul>
+          <li>VI 識別系統建立<span class="priority high">優先</span></li>
+          <li>創辦人 IP 與場域品牌雙軌敘事</li>
+          <li>品牌故事文案標準化</li>
+          <li>中英日多語品牌句</li>
+        </ul>
+      </div>
+
+      <div class="q-card">
+        <div class="q-num">02</div>
+        <h3>數位門面</h3>
+        <div class="q-en">DIGITAL PRESENCE</div>
+        <ul>
+          <li>官方網站重新設計<span class="priority high">優先</span></li>
+          <li>Google 商家檔案 SEO 優化<span class="priority high">優先</span></li>
+          <li>Booking / Agoda / KKday / TripAdvisor 文案重寫</li>
+          <li>線上訂房整合（不被平台 30% 抽成綁住）</li>
+        </ul>
+      </div>
+
+      <div class="q-card">
+        <div class="q-num">03</div>
+        <h3>內容生產</h3>
+        <div class="q-en">CONTENT ENGINE</div>
+        <ul>
+          <li>書法家日常 vlog 系列<span class="priority high">優先</span></li>
+          <li>AI 生成書法成形動畫</li>
+          <li>主題房 360° 虛擬導覽</li>
+          <li>客人故事美學紀錄</li>
+        </ul>
+      </div>
+
+      <div class="q-card">
+        <div class="q-num">04</div>
+        <h3>產品設計</h3>
+        <div class="q-en">PRODUCT DESIGN</div>
+        <ul>
+          <li>住宿即收藏（附親筆作品）<span class="priority high">優先</span></li>
+          <li>親授書法工作坊（高客單）<span class="priority mid">中期</span></li>
+          <li>節氣寫春 / 蓮花季限定包</li>
+          <li>文房四寶體驗包</li>
+        </ul>
+      </div>
+
+      <div class="q-card">
+        <div class="q-num">05</div>
+        <h3>體驗深化</h3>
+        <div class="q-en">EXPERIENCE DESIGN</div>
+        <ul>
+          <li>Check-in 前的故事預熱<span class="priority mid">中期</span></li>
+          <li>入住歡迎儀式（茶、書、導覽）</li>
+          <li>餐飲故事化（每道菜配書法句）</li>
+          <li>退房贈禮（小作品、明信片）</li>
+        </ul>
+      </div>
+
+      <div class="q-card">
+        <div class="q-num">06</div>
+        <h3>通路與 B2B</h3>
+        <div class="q-en">CHANNELS &amp; B2B</div>
+        <ul>
+          <li>企業送禮通路（高端客戶禮物）</li>
+          <li>婚紗 / 求婚場地</li>
+          <li>企業包場（年會、品牌發表）</li>
+          <li>異業聯名（茶、酒、文具）</li>
+        </ul>
+      </div>
+
+      <div class="q-card">
+        <div class="q-num">07</div>
+        <h3>數據與系統</h3>
+        <div class="q-en">DATA &amp; TECH</div>
+        <ul>
+          <li>CRM 客戶資料與回購提醒</li>
+          <li>動態定價（旺/平日/節日）</li>
+          <li>評論監測與快速回應 SOP</li>
+          <li>Google Analytics + Meta Pixel 追蹤</li>
+        </ul>
+      </div>
+
+      <div class="q-card">
+        <div class="q-num">08</div>
+        <h3>國際化</h3>
+        <div class="q-en">INTERNATIONALIZATION</div>
+        <ul>
+          <li>英 / 日多語官網</li>
+          <li>國際 KOL 邀請（書法、文化線）</li>
+          <li>文化部國際藝術交流補助申請</li>
+          <li>觀光局海外推廣資源對接</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ROADMAP ===== -->
+<section class="roadmap">
+  <div class="container">
+    <span class="section-tag">EXECUTION ROADMAP</span>
+    <h2 class="section-title">三階段執行路線</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      不會一次全做。先把地基打好，再做差異化，最後規模化。
+      每個階段都有可驗證的產出，不是空話。
+    </p>
+
+    <div class="timeline">
+      <div class="phase">
+        <div class="phase-time">PHASE 01 ｜ 1 – 3 個月</div>
+        <h3>地基：把產品力翻譯成行銷力</h3>
+        <p>產品力已經有了，但市場看不到。先讓所有對外接觸點都換上「書法家的家」的敘事，把 8.7 評分轉成可量化的訂房動能。</p>
+        <div class="phase-tags">
+          <span>VI 識別系統</span>
+          <span>官網重做</span>
+          <span>Google 商家優化</span>
+          <span>Booking 房型描述重寫</span>
+          <span>IG / FB 視覺統一</span>
+          <span>住宿即收藏方案上線</span>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">PHASE 02 ｜ 3 – 6 個月</div>
+        <h3>差異化：用工作坊與內容建立溢價</h3>
+        <p>地基穩固後，推出親授書法工作坊作為高客單核心商品，並建立穩定的內容矩陣（短影音、長影片、紀錄片），讓品牌每月都有新故事可說。</p>
+        <div class="phase-tags">
+          <span>工作坊產品上線</span>
+          <span>AI 短影片矩陣</span>
+          <span>B2B 企業送禮包裝</span>
+          <span>季節限定方案（蓮花、節氣）</span>
+          <span>KOL 體驗合作</span>
+          <span>動態定價導入</span>
+        </div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-time">PHASE 03 ｜ 6 – 12 個月</div>
+        <h3>規模化：跨出國境，打造文化 IP</h3>
+        <p>產品和敘事都成熟後，開拓國際市場與線上產品線，讓陳老師的影響力不再受限於館舍空間，把書法館變成台灣文化輸出的重要節點。</p>
+        <div class="phase-tags">
+          <span>英 / 日多語化</span>
+          <span>線上書法課程</span>
+          <span>CRM + 會員制</span>
+          <span>國際藝術家駐村</span>
+          <span>文化部 / 觀光局合作</span>
+          <span>異業聯名商品</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services">
+  <div class="container">
+    <span class="section-tag">WHAT WE DELIVER</span>
+    <h2 class="section-title">我們能替您做的事</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      不只是顧問，我們直接交付可上線的成品。從第一行程式到第一支影片，從一張 logo 到整套行銷素材。
+    </p>
+
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="svc-icon">網</div>
+        <h3>官方網站重新設計與開發</h3>
+        <p>取代現有 Weebly，打造符合館舍氣質的高端官網，含 CMS 後台。</p>
+        <div class="deliv"><b>交付：</b>RWD 響應式網站、訂房表單、Google 收錄優化、後台可自助更新</div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-icon">影</div>
+        <h3>AI 影片與短影音製作</h3>
+        <p>用 AI 工具生成書法成形動畫、館舍空拍、季節主題短片，量產不費力。</p>
+        <div class="deliv"><b>交付：</b>每月 8 支短影音 + 1 支長影片，含腳本、配樂、字幕</div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-icon">印</div>
+        <h3>品牌識別系統 VI</h3>
+        <p>從 Logo、色彩、字體到應用設計（名片、信封、布旗、包裝），全套到位。</p>
+        <div class="deliv"><b>交付：</b>Brand Guideline 50+ 頁、向量檔、應用模板</div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-icon">社</div>
+        <h3>社群代營運</h3>
+        <p>IG / Threads / 小紅書三平台，每週 5 則貼文，內容企劃 + 視覺製作 + 文案撰寫。</p>
+        <div class="deliv"><b>交付：</b>月度內容月曆、貼文模板、KOL 媒合、互動回覆 SOP</div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-icon">訂</div>
+        <h3>訂房系統整合</h3>
+        <p>Booking / Agoda / KKday 多平台同步，避免超賣，搭配自家 PMS 直接管理。</p>
+        <div class="deliv"><b>交付：</b>Channel Manager 串接、PMS 後台、Email 確認自動化</div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-icon">會</div>
+        <h3>CRM 與會員系統</h3>
+        <p>記住每位客人的喜好、回購提醒、生日禮、文房會員等級，把一次客變終身客。</p>
+        <div class="deliv"><b>交付：</b>CRM 後台、Email/SMS 自動化、會員專區、回頭率報表</div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-icon">文</div>
+        <h3>多語言內容生產</h3>
+        <p>英、日、韓、簡體中文。不只翻譯，是在地化文化詮釋，讓國外客人讀得懂感受得到。</p>
+        <div class="deliv"><b>交付：</b>官網全站翻譯、Booking 多語版本、社群多語素材</div>
+      </div>
+
+      <div class="svc">
+        <div class="svc-icon">寫</div>
+        <h3>行銷文案與品牌敘事</h3>
+        <p>每個房間一個故事、每道菜一句書法、每場活動一篇新聞稿。把藝術家的話翻譯成客人聽得懂的話。</p>
+        <div class="deliv"><b>交付：</b>主題房文案、官網落地頁、媒體稿、廣告素材</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXPECTED IMPACT ===== -->
+<section class="impact">
+  <div class="container">
+    <span class="section-tag" style="color:var(--vermilion)">EXPECTED IMPACT</span>
+    <h2 class="section-title">12 個月後的可預期變化</h2>
+    <div class="section-divider"></div>
+    <p class="section-subtitle">
+      所有數字都是相對保守估算，不是行銷話術。
+      根據文化型住宿（如東隅、勤美學）的市場 benchmark，這個級別的轉換通常是合理可達的。
+    </p>
+
+    <div class="impact-grid">
+      <div class="impact-card">
+        <div class="from-to">
+          <div class="from">3,000–6,400</div>
+          <span class="to">6,000–15,000</span>
+        </div>
+        <div class="label">平均客單價（NTD）</div>
+      </div>
+      <div class="impact-card">
+        <div class="from-to">
+          <div class="from">~ 50%</div>
+          <span class="to">75% +</span>
+        </div>
+        <div class="label">入住率</div>
+      </div>
+      <div class="impact-card">
+        <div class="from-to">
+          <div class="from">純住宿</div>
+          <span class="to">+ 工作坊 30%</span>
+        </div>
+        <div class="label">非住宿營收佔比</div>
+      </div>
+      <div class="impact-card">
+        <div class="from-to">
+          <div class="from">~ 0%</div>
+          <span class="to">10–15%</span>
+        </div>
+        <div class="label">國際旅客比例</div>
+      </div>
+      <div class="impact-card">
+        <div class="from-to">
+          <div class="from">無</div>
+          <span class="to">B2B 通路</span>
+        </div>
+        <div class="label">企業客戶 / 包場合作</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="container">
+    <h2>讓書法的線條<br>畫進<span class="brush-stroke">商業敘事</span>裡</h2>
+    <p>
+      下一步：我們會抓取 Booking 全部住客評論做深度分析，<br>
+      把真實住客的話變成最有力的行銷素材。
+    </p>
+    <div class="cta-btns">
+      <a href="#" class="btn btn-primary">啟動 Phase 1 ↗</a>
+      <a href="#" class="btn btn-secondary">下載完整提案 PDF</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    為 <b style="color:#fff">陳世憲老師 ｜ 在人旅館 _ 台灣意象書法館</b> 提案<br>
+    <span style="opacity:0.6">2026.05 ｜ <span class="vermilion">Made with respect for the art of writing</span></span>
+  </div>
+</footer>
+
+<script>
+// Reveal on scroll
+const observer = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible') })
+},{threshold:0.1});
+document.querySelectorAll('section').forEach(el=>{
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+</script>
+</body>
+</html>
