@@ -1,12 +1,19 @@
 # HANDOFF — 陳世憲書法館行銷企劃
 
 > Machine: DESKTOP-65URRMU
-> Last updated: 2026-05-03
+> Last updated: 2026-05-03 (晚間 — 數據修正版)
 > Type: 行銷諮詢 + HTML 提案頁
 
 ## GitHub
 - Repo: https://github.com/xuancheng307/chenshihsien-hotel-strategy
 - Pages: https://xuancheng307.github.io/chenshihsien-hotel-strategy/
+- Latest commit: ac45fd0 — fix: 更正房價與評分數據
+
+## 本次新增工作 (2026-05-03 晚)
+- **Puppeteer 多日期實價爬蟲** — 抓取 2026-05-16 / 06-13 / 07-04 三個週末 + 一個週日的 Booking 實際成交價
+- **數據錯誤修正** — 之前報的 8.7 評分、3,000-6,400 房價都是錯的；實際 8.3 分 / 124 則評論 / 1,120-3,000 售價
+- **HTML 定價論點重構** — 從「已跳出民宿賽道」翻轉為「產品力夠水準但定價跌回民宿區間」，反而更有說服力
+- **修正並重新部署** — Hero、KPI snapshot、定位轉換、Phase 1、12 個月效益四段全部更新
 
 ## 專案對象
 - **館長**：陳世憲（1967 生，台南白河，台灣意象書法家）
