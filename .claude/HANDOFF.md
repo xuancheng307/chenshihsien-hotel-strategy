@@ -140,6 +140,18 @@
    - 親授書法工作坊作為高利潤核心商品（建議客單 8,000–12,000）
    - 內容行銷不打硬廣 + B2B/異業多元收入
 
+## 2026-05-05 v8.3 A04 補 Agoda 高分成事實（館長提供）
+- 館長提供：Agoda 平台分成可能高達 25%（vs Booking 15%）
+- A04 改寫：標題加 "(Agoda 可能高達 25%)"；asource 拆 Booking/Agoda；aimpact 加 Agoda 主力情境的成本翻倍計算 + 推官網直訂分流建議
+- 養館算式仍以 Booking 15% 為基準（已在 footnote 標註基於 A04）
+- 與 v8.2 一起 commit + push
+
+## 2026-05-05 v8.2 A14 重寫（館長決策：主名稱不改）
+- 用戶確認：旅館主名稱（Property Name）不變、房型描述（Room Name）可改
+- A14 從「Booking Property Name 變更約 1-3 週」改寫為「房型描述（Room Name）可由館方後台自助即時修改」
+- 明寫「旅館主名稱依館長指示不變更，不在本提案範圍內」固化決策
+- 待用戶授權 commit + push
+
 ## 2026-05-05 v8.1 手機排版修訂（claude5 session 末段，未 commit）
 - 用戶要求針對手機去排版（不接受桌面降級）
 - 手機檢查（390px iPhone 12-14）發現 nurture 表唯一硬問題：
