@@ -140,6 +140,16 @@
    - 親授書法工作坊作為高利潤核心商品（建議客單 8,000–12,000）
    - 內容行銷不打硬廣 + B2B/異業多元收入
 
+## 2026-05-05 v8.1 手機排版修訂（claude5 session 末段，未 commit）
+- 用戶要求針對手機去排版（不接受桌面降級）
+- 手機檢查（390px iPhone 12-14）發現 nurture 表唯一硬問題：
+  - 原 CSS line 159 `@media(max-width:768px){.nurture-row{grid-template-columns:1fr 1fr}.nurture-row.head{display:none}}`
+  - 4 欄塞 2 欄 + 表頭隱藏 → 數字失去房型對應
+- 改成卡片式：項目當標題，下面 3 行用 ::before 注入「靜居 ｜ / 雅居 ｜ / 館長日 ｜」標籤
+- 桌面版 100% 不變
+- letter / snapshot / products / pact / masterbook / questions 手機版視覺都 OK
+- 待用戶授權：commit + push v8.1，可選增測 360px Android / 768px 平板 / 橫向
+
 ## 2026-05-05 v7 → v8 第二輪檢查修訂（claude5 session 後段）
 - 用戶要求「重新檢查」，發現 4 處 v7 漏修：
   1. line 813 BRAKE 04「館長書」殘留 → 改「月字主題範圍、年度作品集授權、衍生商品授權、品牌素材使用範圍」
